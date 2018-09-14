@@ -51,8 +51,8 @@ STRING   ::= '"' + [^*"]* + '"' // any string without * or " in it, enclosed by 
 
 RESERVED ::= KEYWORD || M_OP || S_OP || AGGREGATOR || KIND
 KEYWORD  ::= 'In' || 'dataset' || 'find' || 'all' || 'show' || 'and' || 'or' || 'sort' || 'by' || 'entries' || 'is' || 'the' || 'of' || 'whose'
-M_OP     ::= 'is ' + ('not ' +)? ('greater than ' || 'less than ' || 'equal to ') + NUMBER
-S_OP     ::= (('is ' + ('not ' +)?) || (('includes ' || 'does not include ') || ('begins' || 'does not begin' || 'ends' || 'does not end' + ' with '))) + STRING
+M_OP     ::= 'is ' + ('not ' +)? ('greater than ' || 'less than ' || 'equal to ')
+S_OP     ::= (('is ' + ('not ' +)?) || (('includes ' || 'does not include ') || ('begins' || 'does not begin' || 'ends' || 'does not end' + ' with ')))
 KIND     ::= 'courses'
 
 INPUT    ::= string of one or more characters. Cannot contain spaces, underscores or equal to RESERVED strings
